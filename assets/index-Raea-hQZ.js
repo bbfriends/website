@@ -158,7 +158,8 @@ Error generating stack: `+o.message+`
 `;function Ow(){return R.jsxs(Rw,{children:[R.jsx("li",{children:R.jsx("a",{href:"",target:"_blank",rel:"noreferrer",children:R.jsx("img",{src:Cw,alt:""})})}),R.jsx("li",{children:R.jsx("a",{href:"",target:"_blank",rel:"noreferrer",children:R.jsx("img",{src:_w,alt:""})})}),R.jsx("li",{children:R.jsx("a",{href:"",target:"_blank",rel:"noreferrer",children:R.jsx("img",{src:Pw,alt:""})})})]})}function no(e){return typeof Symbol=="function"&&typeof Symbol.iterator=="symbol"?no=function(n){return typeof n}:no=function(n){return n&&typeof Symbol=="function"&&n.constructor===Symbol&&n!==Symbol.prototype?"symbol":typeof n},no(e)}function Nw(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function xf(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function Tw(e,t,n){return t&&xf(e.prototype,t),n&&xf(e,n),e}function Aw(e,t){return t&&(no(t)==="object"||typeof t=="function")?t:ro(e)}function ps(e){return ps=Object.setPrototypeOf?Object.getPrototypeOf:function(n){return n.__proto__||Object.getPrototypeOf(n)},ps(e)}function ro(e){if(e===void 0)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}function zw(e,t){if(typeof t!="function"&&t!==null)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&hs(e,t)}function hs(e,t){return hs=Object.setPrototypeOf||function(r,i){return r.__proto__=i,r},hs(e,t)}function io(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}var Wh=function(e){zw(t,e);function t(){var n,r;Nw(this,t);for(var i=arguments.length,o=new Array(i),l=0;l<i;l++)o[l]=arguments[l];return r=Aw(this,(n=ps(t)).call.apply(n,[this].concat(o))),io(ro(r),"state",{bootstrapped:!1}),io(ro(r),"_unsubscribe",void 0),io(ro(r),"handlePersistorState",function(){var u=r.props.persistor,s=u.getState(),a=s.bootstrapped;a&&(r.props.onBeforeLift?Promise.resolve(r.props.onBeforeLift()).finally(function(){return r.setState({bootstrapped:!0})}):r.setState({bootstrapped:!0}),r._unsubscribe&&r._unsubscribe())}),r}return Tw(t,[{key:"componentDidMount",value:function(){this._unsubscribe=this.props.persistor.subscribe(this.handlePersistorState),this.handlePersistorState()}},{key:"componentWillUnmount",value:function(){this._unsubscribe&&this._unsubscribe()}},{key:"render",value:function(){return typeof this.props.children=="function"?this.props.children(this.state.bootstrapped):this.state.bootstrapped?this.props.children:this.props.loading}}]),t}(_.PureComponent);io(Wh,"defaultProps",{children:null,loading:null});const jw=Ee.div`
     
     overflow-y: auto;
-    margin-top: 80px;
+    margin: 80px 0;
+    background: #f00;
 `;function di({children:e}){return R.jsx(R.Fragment,{children:R.jsx(Wh,{loading:null,persistor:gw,children:R.jsx(H0,{store:Oa,children:R.jsxs("div",{className:"mainBody",children:[R.jsx(Ew,{}),R.jsx(jw,{children:e}),R.jsx(Ow,{})]})})})})}const Iw=Ee.div`
     padding-top: 130px;
     box-sizing: border-box;
@@ -218,7 +219,7 @@ Error generating stack: `+o.message+`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: calc(100% - 160px);
 `,Bw=Ee.div`
     width: 640px;
     height: 560px;
